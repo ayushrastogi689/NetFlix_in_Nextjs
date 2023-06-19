@@ -32,9 +32,11 @@ const Movies = async () => {
     <section className={styles.movieSection}>
       <div className={styles.container}>
         <h1>Movies, Series and TV Shows</h1>
-        {titleData?.map((element) => {
-          return <MovieCard key={element.id} {...element} />;
-        })}
+        <div className={styles.card_section}>
+          {titleData?.map((element) => {
+            return <MovieCard key={element.id} {...element} />;
+          })}
+        </div>
       </div>
     </section>
   );
