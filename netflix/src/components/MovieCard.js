@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "@/app/style/common.module.css";
 import Link from "next/link";
+import Image from "next/image";
 
 const MovieCard = (element) => {
   const { id, type, title, synopsis } = element.jawSummary;

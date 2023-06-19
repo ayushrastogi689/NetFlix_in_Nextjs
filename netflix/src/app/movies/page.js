@@ -25,8 +25,8 @@ const Movies = async () => {
 
   const response = await fetch(url, options);
   const data = await response.json();
-  const titleData = data?.title;
-  console.log(data);
+  const titleData = data?.titles;
+  // console.log(data);
 
   return (
     <section className={styles.movieSection}>
