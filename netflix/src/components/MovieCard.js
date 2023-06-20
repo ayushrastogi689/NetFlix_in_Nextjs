@@ -12,13 +12,13 @@ const MovieCard = (element) => {
           <Image
             src={element?.jawSummary?.backgroundImage?.url}
             alt="title"
-            width={250}
+            width={260}
             height={200}
           />
         </div>
         <div className={styles.card_data}>
-          <h2>{title.substring(0, 18)+"..."}</h2>
-          <p>{synopsis.substring(0, 66)+"..."}</p>
+          <h2>{title.substring(0, 18) + "..."}</h2>
+          <p>{synopsis.substring(0, 66) + "..."}</p>
           <Link href={`/movies/${id}`}>
             <button>Read More</button>
           </Link>

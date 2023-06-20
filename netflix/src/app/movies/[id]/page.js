@@ -2,6 +2,7 @@ import React from "react";
 import styles from "@/app/style/common.module.css";
 import Image from "next/image";
 import Link from "next/link";
+
 const page = async ({ params }) => {
   const id = params.id;
   const url =
@@ -17,24 +18,25 @@ const page = async ({ params }) => {
 
   const response = await fetch(url, options);
   const data = await response.json();
-  const main_data = data[0].details;
+  const main_data = data[0]?.details;
+  //console.log(main_data);
 
   return (
     <div className={styles.container}>
       <h2 className={styles.movie_title}>
-        Netflix / <span>{main_data.type}</span>
+        Netflix \ <span>{main_data?.type}</span>
       </h2>
       <div>
         <Image
-          src={main_data.backgroundImage.url}
-          alt={main_data.title}
+          src={main_data?.backgroundImage?.url}
+          alt={main_data?.title}
           width={600}
           height={300}
         />
       </div>
       <div>
-        <h1>{main_data.title}</h1>
-        <p>{main_data.synopsis}</p>
+        <h1>{main_data?.title}</h1>
+        <p>{main_data?.synopsis}</p>
       </div>
     </div>
   );
