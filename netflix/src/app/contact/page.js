@@ -10,7 +10,7 @@ const Contact = () => {
         <ContactCard />
         <section className={styles.contact_section}>
           <h2>
-            We would love to hear <span>from you</span>{" "}
+            We would love to hear <span>from you</span>
           </h2>
           <ContactForm />
         </section>
