@@ -42,6 +42,7 @@ const ContactForm = () => {
               value={user.username}
               onChange={handleChange}
               autoComplete="off"
+              required
             />
           </label>
         </div>
@@ -58,6 +59,7 @@ const ContactForm = () => {
               value={user.email}
               onChange={handleChange}
               autoComplete="off"
+              required
             />
           </label>
         </div>
@@ -73,6 +75,7 @@ const ContactForm = () => {
               value={user.message}
               onChange={handleChange}
               autoComplete="off"
+              required
             />
           </label>
         </div>
